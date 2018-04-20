@@ -9,8 +9,6 @@
   "author": "thepauljones@gmail.com",
   "license": "ISC",
   "dependencies": {
-    "@runway/util-deferdate-y/util-y/util-envy/util-envenvfns": "^1.28.5",
-    "jimp": "^0.2.28",
-    "moment-timezone": "^0.5.13"
+    "jimp": "^0.2.28"
   }
 }
