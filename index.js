@@ -1,12 +1,26 @@
 #! /usr/local/bin/node
 
-// Settings - TODO Read these from command line as params
 const SIZES = [
-    2560,
-    1024,
-    800,
-    640,
-    320
+    558,
+    512,
+    310,
+    270,
+    228,
+    196,
+    192,
+    180,
+    150,
+    144,
+    128,
+    120,
+    96,
+    76,
+    72,
+    70,
+    48,
+    36,
+    32,
+    16
 ];
 
 const DIR = './images';
@@ -17,7 +31,7 @@ const Jimp = require('jimp');
 
 const searchDir = DIR || '.';
 
-const files = fs.readdirSync(searchDir).filter(filename => filename.indexOf('.jpg') > -1);
+const files = fs.readdirSync(searchDir).filter(filename => filename.indexOf('.png') > -1);
 
 console.log(`JPG files detected:  ${files}`); // eslint-disable-line
 
@@ -33,7 +47,7 @@ files.forEach((file) => {
 
             image
                 .resize(fileSize, Jimp.AUTO)
-                .write(`${searchDir}/${file.split('.jpg')[0]}_${fileSize}.jpg`);
+                .write(`${searchDir}/${file.split('.png')[0]}-${fileSize}.png`);
 
         });
 
